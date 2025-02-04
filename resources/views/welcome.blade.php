@@ -5,9 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Palang Pintu Kereta Api</title>
     <style>
+
+        html, body {
+            overflow: hidden;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background: url('kcic.png') no-repeat center center fixed;
+            background-size: cover;
             margin: 0;
             padding: 20px;
             display: flex;
@@ -16,24 +25,25 @@
             height: 100vh; 
         }
         .container {
-            background-color: white;
+            background-color: transparent;
+            backdrop-filter: blur(20px);
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             padding: 80px 200px;
-            max-width: 400px;
-            width: 100%; 
+            max-width: 500px;
+            width:150%; 
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
             position: relative;
-            overflow: hidden; /* Agar teks tidak keluar dari container */
+            overflow: hidden; 
         }
         h1 {
             margin: 0;
             padding-bottom: 20px;
             font-size: 24px;
-            color: #2c3e50;
+            color: #ffffff;
             width: 100%;
             text-align: center;
             border-bottom: 2px solid #ccc;
@@ -54,7 +64,7 @@
         button:hover {
             background-color: #0add2e;
         }
-        /* Marquee berjalan penuh dalam container */
+        
         .marquee-container {
             width: 100%;
             height: 40px;
@@ -66,7 +76,7 @@
             position: relative;
             border-radius: 5px;
             margin-top: 10px;
-            visibility: hidden; /* Awalnya disembunyikan */
+            visibility: hidden; 
         }
         .marquee-text {
             display: inline-block;
@@ -98,7 +108,7 @@
             <button type="submit">Tutup Palang Pintu</button>
         </form>
 
-        <!-- Marquee untuk status dalam container -->
+        
         <div class="marquee-container" id="marquee">
             <div id="marquee-text" class="marquee-text">.................</div>
         </div>
